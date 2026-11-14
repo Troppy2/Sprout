@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Form fixture</title>
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 24px; }
+      .stack { position: relative; width: 220px; height: 48px; margin: 12px 0; }
+      .cover { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.6); color: #fff; padding: 12px; }
+      .spacer { height: 1400px; }
+    </style>
+  </head>
+  <body>
+    <h1>Sign up for the newsletter</h1>
+
+    <p>Counter: <output id="count">0</output> <button id="inc" type="button">Add one</button></p>
+
+    <div class="stack">
+      <button id="covered" type="button">Covered button</button>
+      <div class="cover">Cookie banner</div>
+    </div>
+
+    <form method="post" action="/submitted">
+      <p><label>Name <input name="name" autocomplete="name" /></label></p>
+      <p><label>Email <input name="email" type="email" autocomplete="email" /></label></p>
+      <p>
+        <label>Plan
+          <select name="plan">
+            <option>Free</option>
+            <option>Pro</option>
+          </select>
+        </label>
+      </p>
+      <p><label><input name="terms" type="checkbox" /> I accept the terms</label></p>
+      <p><label>Password <input name="password" type="password" autocomplete="new-password" /></label></p>
+      <p><label>Code <input name="otp" autocomplete="one-time-code" inputmode="numeric" /></label></p>
+      <p><button type="submit">Subscribe</button></p>
+    </form>
+
+    <div class="spacer"></div>
+    <p id="bottom">Bottom of the page.</p>
+
+    <script>
+      const count = document.getElementById("count");
+      document.getElementById("inc").addEventListener("click", () => {
+        count.textContent = String(Number(count.textContent) + 1);
+      });
+    </script>
+  </body>
+</html>

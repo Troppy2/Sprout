@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sprout needs permission</title>
+    <link rel="stylesheet" href="../popup/tokens.css" />
+    <link rel="stylesheet" href="approve.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Sprout needs permission</h1>
+      <p class="lead">An AI agent wants to <strong id="need">look at</strong></p>
+      <p id="origin" class="origin">(origin)</p>
+      <p id="detail" class="detail" hidden></p>
+
+      <ul class="tiers">
+        <li><strong>Look</strong>: screenshots and reading the page.</li>
+        <li><strong>Act</strong>: click, type and scroll. Sending, buying, deleting and submitting still ask you each time.</li>
+      </ul>
+
+      <div class="actions">
+        <button id="deny" type="button" class="secondary">Deny</button>
+        <button id="allow-look" type="button">Allow look</button>
+        <button id="allow-act" type="button" hidden>Allow act</button>
+        <button id="allow-once" type="button" hidden>Allow once</button>
+      </div>
+
+      <p class="hint">You can revoke this any time in the Sprout popup.</p>
+    </main>
+    <script src="approve.js" type="module"></script>
+  </body>
+</html>

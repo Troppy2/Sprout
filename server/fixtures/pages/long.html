@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Long list fixture</title></head>
+  <body>
+    <h1>Long list</h1>
+    <ol id="list"></ol>
+    <p id="end">End of the list.</p>
+    <script>
+      const list = document.getElementById("list");
+      for (let i = 1; i <= 500; i += 1) {
+        const li = document.createElement("li");
+        const link = document.createElement("a");
+        link.href = `#item-${i}`;
+        link.textContent = `Item number ${i}`;
+        li.append(link);
+        list.append(li);
+      }
+    </script>
+  </body>
+</html>

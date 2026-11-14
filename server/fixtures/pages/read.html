@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Reading fixture</title></head>
+  <body>
+    <header>
+      <nav aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/form.html">Form</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Garden supplies</h1>
+      <p>Three products are in stock today.</p>
+      <h2>Products</h2>
+      <ul>
+        <li>Seed tray <button type="button">Add seed tray</button></li>
+        <li>Watering can <button type="button">Add watering can</button></li>
+        <li>Trowel <button type="button" disabled>Add trowel (sold out)</button></li>
+      </ul>
+      <label for="search">Search products</label>
+      <input id="search" type="search" placeholder="Search" />
+      <div style="display: none"><button type="button">Hidden button, must not appear</button></div>
+      <h2>Embedded</h2>
+      <iframe title="Same-origin frame" src="/long.html" width="300" height="120"></iframe>
+    </main>
+  </body>
+</html>

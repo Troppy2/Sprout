@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--green-lightest);
+}
+
+main {
+  box-sizing: border-box;
+  max-width: 420px;
+  padding: 20px 16px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 17px;
+}
+
+.lead {
+  margin: 0;
+  color: var(--muted);
+}
+
+.origin {
+  margin: 4px 0 12px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.detail {
+  margin: 0 0 12px;
+  padding: 8px 10px;
+  border-left: 3px solid var(--danger);
+  background: var(--surface);
+  overflow-wrap: anywhere;
+}
+
+.tiers {
+  margin: 0 0 16px;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+button {
+  flex: 1 1 110px;
+  padding: 8px 12px;
+  border: 1px solid var(--green-dark);
+  border-radius: var(--radius);
+  background: var(--green-light);
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--green-light-mid);
+}
+
+button.secondary {
+  border-color: var(--border);
+  background: var(--surface);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--green-dark);
+  outline-offset: 1px;
+}
+
+.hint {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
