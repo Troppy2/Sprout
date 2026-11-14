@@ -1,0 +1,17 @@
+/* Sprout color tokens, from Nosey's palette (see .claude/design/design-tokens.md).
+   No hardcoded hex in component CSS: use these variables. */
+:root {
+  --green-lightest: #e9f5db;
+  --green-light: #cfe1b9;
+  --green-light-mid: #b5c99a;
+  --green-mid: #97a97c;
+  --green-dark-mid: #87986a;
+  --green-dark: #718355;
+  --ink: #26301f;
+
+  --surface: #ffffff;
+  --muted: #5f6b53;
+  --border: var(--green-light-mid);
+  --danger: #8a3b2e;
+  --radius: 8px;
+}

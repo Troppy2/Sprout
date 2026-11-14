@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="128" height="128">
+  <!-- Sprout app tile: concept A seedling, filled, Nosey green (#718355 tile, #e9f5db mark). -->
+  <rect width="24" height="24" rx="6" fill="#718355"/>
+  <g transform="translate(2.4 2.4) scale(0.8)" fill="#e9f5db" stroke="#e9f5db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 13C7 13 3.5 10.5 3.5 6c4.5 0 8.5 2.5 8.5 7Z"/>
+    <path d="M12 11c0-4.5 3.5-7.5 8.5-7.5 0 4.5-3.5 7.5-8.5 7.5Z"/>
+    <path fill="none" d="M12 11v6"/>
+    <rect x="5" y="17" width="14" height="4" rx="2"/>
+  </g>
+</svg>

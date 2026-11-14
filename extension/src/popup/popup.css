@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  padding: 12px;
+  width: 260px;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 13px;
+  color: var(--ink);
+  background: var(--green-lightest);
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green-mid);
+  flex: none;
+}
+
+.dot[data-status="connected"] {
+  background: var(--green-dark);
+}
+
+.dot[data-status="connecting"] {
+  background: var(--green-mid);
+}
+
+.dot[data-status="disconnected"] {
+  background: var(--border);
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--muted);
+}
+
+input[type="password"] {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+}
+
+input[type="password"]:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--green-dark);
+  outline-offset: 1px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+button {
+  flex: 1;
+  padding: 7px 10px;
+  border: 1px solid var(--green-dark);
+  border-radius: var(--radius);
+  background: var(--green-light);
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: var(--green-light-mid);
+}
+
+button:disabled {
+  border-color: var(--border);
+  background: var(--green-lightest);
+  color: var(--muted);
+  cursor: default;
+}
+
+.hint {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.hint[data-tone="error"] {
+  color: var(--danger);
+}
+
+/* Sites list (phase 2 grants) and halt banner (phase 3). */
+h2 {
+  margin: 16px 0 6px;
+  font-size: 13px;
+}
+
+.grants {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.grants li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.grants .origin {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.grants .tier {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.grants button {
+  flex: none;
+  padding: 2px 8px;
+  font-size: 11px;
+}
+
+.halt {
+  margin-top: 12px;
+  padding: 8px;
+  border: 1px solid var(--danger);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.halt p {
+  margin: 0 0 6px;
+}

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sprout</title>
+    <link rel="stylesheet" href="tokens.css" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <h1>Sprout</h1>
+
+    <p class="status">
+      <span id="dot" class="dot" data-status="disconnected"></span>
+      <span id="status">disconnected</span>
+    </p>
+
+    <label for="token">Pairing token</label>
+    <input
+      id="token"
+      type="password"
+      autocomplete="off"
+      spellcheck="false"
+      placeholder="Paste the contents of ~/.sprout/token"
+    />
+
+    <div class="actions">
+      <button id="save" type="button">Save</button>
+      <button id="stop" type="button" disabled title="Stop arrives in phase 3 (Alt+Shift+S)">Stop</button>
+    </div>
+
+    <p id="saved" class="hint">No token saved yet.</p>
+    <p class="hint">A saved token is never shown again. Paste a new one to replace it.</p>
+
+    <!-- Phase 3 (step 3.5): shown only while halted. -->
+    <section id="halt" class="halt" hidden>
+      <p id="halt-reason">Sprout is paused.</p>
+      <button id="resume" type="button">Resume</button>
+    </section>
+
+    <!-- Phase 2 (step 2.3): one row per granted origin, built with textContent. -->
+    <section class="sites">
+      <h2>Sites</h2>
+      <ul id="grants" class="grants"></ul>
+      <p id="no-grants" class="hint">No sites allowed yet. Sprout asks the first time it needs one.</p>
+    </section>
+
+    <script src="popup.js" type="module"></script>
+  </body>
+</html>
