@@ -12,7 +12,7 @@ An MCP server and Chrome extension that lets any MCP client (Claude Code, OpenCo
 ![Node 22+](https://img.shields.io/badge/node-22%2B-339933.svg)
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-[Why Sprout](#why-sprout) · [How it works](#how-it-works) · [Getting started](#getting-started) · [Security](#security-model) · [Roadmap](#roadmap) · [Contributing](#contributing)
+[Why Sprout](#why-sprout) · [How it works](#how-it-works) · [Quick setup](#quick-setup) · [Security](#security-model) · [Roadmap](#roadmap) · [Contributing](#contributing)
 
 </div>
 
@@ -65,35 +65,27 @@ Your Chrome, inside a green "Sprout" tab group
 
 Already in place: a navigation guard that blocks redirects and iframes to local network addresses, blocks downloads from Sprout tabs, and refuses `file:`, `chrome:`, and other non-web schemes.
 
-## Getting started
+## Quick setup
 
-There is no packaged release yet. You build from source.
-
-**Requirements:** Node 22 or newer, Chrome 120 or newer, an MCP client.
+Sprout is pre-alpha, so you build it from source. Requirements: Node 22+, Chrome 120+, and an MCP client.
 
 ```bash
 git clone https://github.com/Troppy2/Sprout.git
 cd Sprout
-
-cd server && npm install && npm run build && cd ..
-cd extension && npm install && npm run build && cd ..
+node scripts/setup.mjs
 ```
 
-1. **Load the extension.** Open `chrome://extensions`, turn on Developer mode, click **Load unpacked**, and choose `extension/dist` (not `extension/`).
-2. **Add Sprout to your MCP client.** Most clients take a command and arguments:
+The script builds everything, wires Sprout into Codex if you use it, copies the pairing token to your clipboard, and opens Chrome's extensions page. Then:
 
-   ```json
-   {
-     "mcpServers": {
-       "sprout": {
-         "command": "node",
-         "args": ["/absolute/path/to/Sprout/server/dist/index.js"]
-       }
-     }
-   }
-   ```
-3. **Pair them.** The first run writes a token to `~/.sprout/token` (on Windows, `%USERPROFILE%\.sprout\token`). Open that file, copy its contents, and paste them into the Sprout popup. The token is never printed in logs. Run `node server/dist/index.js --rotate-token` to replace it.
-4. **Try it.** Ask your agent: *"Use Sprout to open example.com and take a screenshot."*
+1. In `chrome://extensions`, turn on Developer mode, click **Load unpacked**, and choose `extension/dist`.
+2. Paste the token into the Sprout popup.
+3. Restart your MCP client and check that Sprout is connected.
+
+Ask your agent: *"Use Sprout to open example.com and take a screenshot."*
+
+For other MCP clients, flags, troubleshooting, and the manual steps, see **[SETUP.md](SETUP.md)**.
+
+Want your coding agent to handle setup? Copy the **[agent setup prompt](SETUP.md#have-an-agent-set-up-sprout)**, including instructions for OpenCode and a connection check.
 
 ### Test pages
 
