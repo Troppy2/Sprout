@@ -8,6 +8,7 @@ Thanks for helping. Sprout drives people's real, signed-in browsers, so the bar 
 - **Test pages.** Add fixture pages in `server/fixtures/pages/` for forms, iframes, dialogs, or injection attempts.
 - **Client setup guides.** Confirm Sprout works in an MCP client and write down the exact steps.
 - **Bugs.** Open an issue with steps to reproduce.
+- **New features**. Open up a new feature or performance idea!
 
 Before starting a new feature, open an issue to discuss it. New features, new tools, and new Chrome permissions are design decisions, and each permission is a trust cost for every user.
 
